@@ -4,7 +4,7 @@ This is a natural language processing project, where efficient string-matching a
 ## Framework:
 Wikipedia is a free online encyclopedia. Wikipedia articles consist mostly of free text, but also contains various types of structured information of wiki markup. Such information includes infobox templates, categorization information, images, geo-coordinates, links to external web pages, disambiguation pages, redirects between pages and link across different language editions of Wikipedia. The characteristics of Wikipedia make it as a rich lexical semantic resources. The DBpedia  project is also a community effort to extract structured information from Wikipedia. In this project, data are from two parts: relation instance from DBpedia (extracted from Wikipedia infobox), and sentences describing the relations from the corresponding Wikipedia pages. The basic idea is to maximize the power of both Wikipedia and DBpedia as seeds to harvest a set of such relational patterns. 
 
-"<img src=\"./framework.png\">"
+![image alt](https://github.com/KKGHOSE2021/Python-Projects/blob/612bec841b3b51c302ba001f9161cb985cec3622/Automatic%20Information%20Extraction/framework.png)
 
 Figure-1 gives an overview of the  Wiki relation pattern extraction framework.
 
