@@ -1,0 +1,1 @@
+In this project, a fleet simulator was developed by solving multiple linear problems using Python. It estimates the optimum energy requirements for fleet vehicles with the goal to minimize the charge costs.
