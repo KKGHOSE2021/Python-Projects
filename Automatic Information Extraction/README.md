@@ -30,7 +30,7 @@ The pipeline follows a three-stage process:
   - Pattern extraction
 * Results show strong performance for high-frequency, well-structured relations, while sparse relations remain challenging.
   
-![image alt](https://github.com/KKGHOSE2021/Python-Projects/blob/c122dff1319785dfc0baba12253cb8485eb9527d/Automatic%20Information%20Extraction/result.png)
+![image alt](https://github.com/KKGHOSE2021/Python-Projects/blob/aa32b220bad8860bf3d26b673a2a72ac69a84f55/Automatic%20Information%20Extraction/result.png)
 
 Table: Results of sentence and pattern evaluation. 
                                   
