@@ -23,7 +23,7 @@ The pipeline follows a three-stage process:
 
 ![image alt](https://github.com/KKGHOSE2021/Python-Projects/blob/612bec841b3b51c302ba001f9161cb985cec3622/Automatic%20Information%20Extraction/framework.png)
 
-Figure-1 gives an overview of the  Wiki relation pattern extraction framework.
+Figure: An overview of the  Wiki relation pattern extraction framework.
 
 ## Evaluation:
 * Evaluated on multiple DBpedia relations (e.g., birthDate, writer, language).
@@ -31,6 +31,8 @@ Figure-1 gives an overview of the  Wiki relation pattern extraction framework.
   - Sentence extraction
   - Pattern extraction
 * Results show strong performance for high-frequency, well-structured relations, while sparse relations remain challenging.
+  ![image alt](https://github.com/KKGHOSE2021/Python-Projects/blob/612bec841b3b51c302ba001f9161cb985cec3622/Automatic%20Information%20Extraction/result.png)
+  Table: Results of sentence and pattern evaluation. 
                                   
 ## Key Contributions:
 * A scalable, mostly language-independent pipeline for relation pattern mining.
