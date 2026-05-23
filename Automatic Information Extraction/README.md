@@ -1,20 +1,45 @@
 ## Project Introduction:
-This is a natural language processing project, where efficient string-matching algorithms were developed to extract relevant information from Wikipedia. Extraction  of  Relational  Patterns  is  particularly  useful  for various  Natural  Language  Processing  tasks  including information  extraction  from  text,  question  answering, and paraphrasing, as they allow to retrieve relevant information for a particular relation. In this work, String matching algorithms have been developed for  different  relational  types  in  different  cases, such that we  can  retrieve  related  sentences  for  each particular relation from a corpus extracted from Wikipedia (eka. WikiCorpus).  In string  matching processes,  we  will  extract  only  those  sentences  from WikiCorpus  that  match  the searched  string  from  a  pair  of predefined  relation-patterns  (domain  and  range)  to  our candidate sentences in WikiCorpus, so that we can collect a set of sentences for each particular relation. 
+This project explores an automated approach for extracting binary relational patterns from Wikipedia text by leveraging structured knowledge from DBpedia and unstructured Wikipedia content. The goal is to identify how semantic relations (e.g., birthDate, writer, language) are expressed in natural language and to build reusable linguistic patterns for downstream NLP tasks.
 
-## Framework:
-Wikipedia is a free online encyclopedia. Wikipedia articles consist mostly of free text, but also contains various types of structured information of wiki markup. Such information includes infobox templates, categorization information, images, geo-coordinates, links to external web pages, disambiguation pages, redirects between pages and link across different language editions of Wikipedia. The characteristics of Wikipedia make it as a rich lexical semantic resources. The DBpedia  project is also a community effort to extract structured information from Wikipedia. In this project, data are from two parts: relation instance from DBpedia (extracted from Wikipedia infobox), and sentences describing the relations from the corresponding Wikipedia pages. The basic idea is to maximize the power of both Wikipedia and DBpedia as seeds to harvest a set of such relational patterns. 
+## Project Objective:
+To automatically discover high-quality textual patterns that express structured relationships between entities, enabling improvements in:
+* Information Extraction (IE)
+* Question Answering (QA)
+* Knowledge Base Population (KBP)
+
+## Methodology:
+The pipeline follows a three-stage process:
+1. Data Preparation
+* Wikipedia dump is processed to build a clean text corpus.
+* Relations and entity mappings are sourced from DBpedia ontology.
+2. Sentence Extraction
+* Sentences containing both domain and range entities of a relation are identified.
+* Uses exact, relaxed, and token-based matching to improve recall.
+3. Pattern Learning
+* Sentences are generalized using semantic types (e.g., PERSON, DATE).
+* Suffix tree–based longest common substring extraction is used to derive relational patterns.
+* Example pattern:
+`[PERSON] was born on [DATE]` 
 
 ![image alt](https://github.com/KKGHOSE2021/Python-Projects/blob/612bec841b3b51c302ba001f9161cb985cec3622/Automatic%20Information%20Extraction/framework.png)
 
 Figure-1 gives an overview of the  Wiki relation pattern extraction framework.
 
-## Task Definition:
-Finding all occurrences of a pattern in a text is a problem that arises frequently in text-editing programs. Typically, the text is a document being edited, and the pattern searched for is a particular word supplied by the user. For this problem, efficient algorithms can greatly aid the responsiveness of the text-editing program. 
-
-The problem will be formalized as follow: A  pattern P is define as a string of characters from a finite alphabet  Σ which need to be identified within the input text. And we can define  sub-pattern  Ps as a sub-string of a pattern P. 
-We assume that  given input text of length n as an array T[1...n]  and the pattern of length m as an array P[1...m], and considering that both the elements of pattern P and text T are characters drawn from a finite alphabet  Σ.
-
-The goal of  pattern matching in a given text is to output the position of all occurrences of the patterns in the text, such that given input text, T = t[1...n]  and a set of r patterns P, where Pj   P (i ≤ j ≤r).
-
-In this project, Wikipedia and DBpedia were processed in a parallel way. First. text corpus from Wikipedia was extracted and a short list of DBpedia relations was selected as a sample for this project. After that, sentences within text corpora were collected to match with the relation. Finally, some patterns were inferred from a set of sentences.
+## Evaluation:
+* Evaluated on multiple DBpedia relations (e.g., birthDate, writer, language).
+* Performance measured using precision, recall, and F1-score for:
+  - Sentence extraction
+  - Pattern extraction
+* Results show strong performance for high-frequency, well-structured relations, while sparse relations remain challenging.
                                   
+## Key Contributions:
+* A scalable, mostly language-independent pipeline for relation pattern mining.
+* Integration of structured knowledge (DBpedia) with unstructured text (Wikipedia).
+* Demonstration of how redundancy between infoboxes and text improves extraction quality.
+* Analysis of factors affecting extraction performance (relation frequency, datatype vs entity relations).
+
+## Potential Applications:
+* Knowledge graph construction
+* Open-domain question answering systems
+* Automated ontology population
+* Semantic search enhancement
